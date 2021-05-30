@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -21,14 +22,14 @@ void main() {
              children: [
                SizedBox(height: 50,),
                Container(
-                 width: 200,
+                 width: 250,
                  child: TextField(
 
                  ),
                ) , 
                SizedBox(height: 30,),
                Container(
-                 width: 200,
+                 width: 250,
                  child: TextField(
 
                  ),
