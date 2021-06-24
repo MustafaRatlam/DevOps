@@ -1,6 +1,6 @@
-
-
 import 'package:flutter/material.dart';
+
+
 
 
 class Profile extends StatefulWidget {
@@ -14,21 +14,36 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         
         body: SingleChildScrollView(
           child: Stack(
             children: <Widget>[
-              SizedBox(
-                height: 250,
-                width: double.infinity,
-                child: Image(
-                  image: NetworkImage(
-                    "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+              
+              Container(
+                
+                child:
+                SizedBox(
+                  height: 250,
+                  width: double.infinity,
+                  child: Image(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+                    ),
+                    fit: BoxFit.cover,
                   ),
-                  fit: BoxFit.cover,
                 ),
               ),
+              Container(
+             alignment: Alignment.topLeft,
+             child: ElevatedButton(onPressed: () {
+                   Navigator.pop(context,);
+                 },child:
+                 Padding(
+                 padding: const EdgeInsets.all(8.8), 
+                 child: Text(" Back")),),
+           ),
               Container(
                 margin: EdgeInsets.fromLTRB(15, 200, 15, 15),
                 child: Column(
